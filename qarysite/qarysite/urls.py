@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 from qary_app import views
-
+from users import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +27,6 @@ urlpatterns = [
     url(r'^team/$', views.team, name='team'),
     url(r'^nlpia/$', views.nlpia, name='nlpia'),
     url(r'^post/', include('qary_post.urls')),
+    url('register/', user_views.register, name='register'),
 
 ]

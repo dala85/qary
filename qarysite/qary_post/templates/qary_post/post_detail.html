@@ -15,9 +15,18 @@
             </div>
             </div>
 
-            <div>
+
+            <!-- Update button -->
+         
               <p><a class='btn btn-warning'href="{% url 'qary_post:update' pk=post_detail.pk %}">Update</a></p>
-            </div>
+            
+
+           
+<!--               Delete button-->              
+                
+                <p><a class='btn btn-danger'href="{% url 'qary_post:delete' pk=post_detail.pk %}">Delete</a></p> 
+              
+
 
 </center>
 
