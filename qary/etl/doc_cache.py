@@ -1,10 +1,8 @@
-from qary_app.models import Document
-
-
 """ find and store dooocumnets and model in django database
 >>> cache_doc("hello world",title='world')
 'world'
 """
+from qary_app.models import Document
 
 
 def cache_doc(text, title):
