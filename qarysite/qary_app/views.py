@@ -2,11 +2,9 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView
 from . import models
 from . models import Chat, Document
-# from qary.clibot import CLIBot
 from qary_app import models
 from rest_framework import generics
 from qary_app.serializers import ChatSerializer
-
 from qary.skills import (parul_bots, basebots, glossary_bots,
                          pattern_bots, search_fuzzy_bots,
                          eliza_bots, qa_bots)
