@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'rest_framework',
     'qary_app',
+    'qary_post'
 
 ]
 

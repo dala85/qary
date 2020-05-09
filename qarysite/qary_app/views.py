@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView
 from . import models
-from . models import Post, Chat, Document
+from . models import Chat, Document
 # from qary.clibot import CLIBot
 from qary_app import models
 from rest_framework import generics
@@ -92,14 +92,3 @@ def reply(request):
                             answer=bot_reply)
 
     return render(request, "bot.html", context=dict_1)
-
-
-class PostListView(ListView):
-    context_object_name = 'posts'
-    model = models.Post
-
-
-class PostDetailView(DetailView):
-    context_object_name = 'post_detail'
-    model = models.Post
-    template_name = 'qary_app/qary_app_detail.html'

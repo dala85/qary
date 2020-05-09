@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^team/$', views.team, name='team'),
     url(r'^nlpia/$', views.nlpia, name='nlpia'),
     url('', include('qary_app.urls')),
+    url(r'^post/$', include('qary_post.urls')),
 
 ]
 
