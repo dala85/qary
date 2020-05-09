@@ -16,29 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
-from django.conf import settings
 from qary_app import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', views.home_view),
-    url(r'^qary_app/', include('qary_app.urls', namespace='qary_app')),
     url(r'question/', views.home_view, name='question'),
     url(r'answer/', views.reply, name='answer'),
     url(r'^team/$', views.team, name='team'),
     url(r'^nlpia/$', views.nlpia, name='nlpia'),
-    url('', include('qary_app.urls')),
-    url(r'^post/$', include('qary_post.urls')),
+    url(r'^post/', include('qary_post.urls')),
 
 ]
-
-
-if settings.DEBUG:
-    import debug_toolbar
-
-    urlpatterns = [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
-
-
-    ] + urlpatterns
