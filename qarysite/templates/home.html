@@ -34,9 +34,6 @@
     </nav>
 </div>
 
-
-
-<div class='jumbotron' >
         {% if messages%}
           {% for message in messages%}
               <div class='alert alert-{{message.tags}}'>
@@ -45,7 +42,10 @@
           {% endfor %}
         {% endif %}
 
-        {% block body_block%}
+<div class='jumbotron' >
+        
+
+      {% block body_block%}
         {% endblock %}
 </div>
 

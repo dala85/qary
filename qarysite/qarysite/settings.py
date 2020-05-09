@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'users',
-
+    'crispy_forms',
     'qary_app',
     'qary_post'
 
@@ -121,6 +121,7 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 INTERNAL_IPS = ['127.0.0.1']
 
