@@ -121,7 +121,13 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'qary_post:list'
+LOGIN_URL = 'login'
 
 INTERNAL_IPS = ['127.0.0.1']
 

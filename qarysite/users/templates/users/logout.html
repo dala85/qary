@@ -1,0 +1,10 @@
+{% extends 'home.html'%}
+{% block body_block%}
+
+	<h2>You have been Logged out</h2>
+    <div class="content-section">
+        <small class="text-muted">
+          	<a href="{%url 'login'%}">Log in Again</a>
+        </small>
+    </div>
+{% endblock body_block %}

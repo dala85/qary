@@ -10,6 +10,9 @@ from django.urls import reverse_lazy
 class PostListView(ListView):
     context_object_name = 'posts'
     model = models.Post
+    template_name = 'qary_post/post_list,html'
+    ordering = ['-create_date']
+    paginated_by = 2
 
 
 class PostDetailView(DetailView):

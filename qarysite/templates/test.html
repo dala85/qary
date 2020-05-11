@@ -22,3 +22,23 @@
 {{ form.as_p }}
 <input type="Submit" name="basebot" value="basebot"/>
 </form>
+
+
+
+<!-- post list  -->
+
+
+{% extends 'home.html'%}
+
+{% block body_block%}
+
+<ul class="list-group" style="text-align: center; ">
+    {% for p in posts %}
+  <li class="list-group-item" >
+    
+    <a href="{{p.id}}" class="d-inline-block mb-2 text-success">{{p.title}}</a>
+  </li>
+    {%endfor%}
+</ul>
+
+{% endblock %}

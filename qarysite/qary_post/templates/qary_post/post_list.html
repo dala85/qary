@@ -1,16 +1,26 @@
 {% extends 'home.html'%}
-
 {% block body_block%}
 
-<ul class="list-group" style="text-align: center; ">
-    {% for p in posts %}
-  <li class="list-group-item" >
-    
-    <a href="{{p.id}}" class="d-inline-block mb-2 text-success">{{p.title}}</a>
-  </li>
-    {%endfor%}
-</ul>
 
+{% for p in posts %}
+ <center>
+      <div class="col-md-6" >
 
+      	<a href="{{p.id}}" class="d-inline-block mb-4 text-success">{{p.title}}</a>
+      	{{p.create_date}}
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start" contenteditable="true" spellcheckker="false" >
+              <h3 class="mb-0">
+
+              	 <img class="rounded-circle account-img mb-2" src="{{user.profile.image.url}}">
+
+                <p>{{p.author}}</p>
+              </h3>
+              <p class="card-text mb-auto">{{p.text}}</p>
+              
+            </div>
+          </div>
+    </div>
+{%endfor%}
 
 {% endblock %}

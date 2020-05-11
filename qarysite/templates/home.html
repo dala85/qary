@@ -18,21 +18,38 @@
 </head>
  <body style="background-color: rgb(255, 255, 255); position: relative; float: none; opacity: 1; text-align: left;font-family: &quot;Comic Sans MS&quot;, cursive, sans-serif;">
 
+
+
 <!-- navbar -->
 <div class="navbar navbar-dark bg-dark">
     <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'qary_post:list'%}">Posts</a>
+    <a class="navbar-brand" href="{% url 'qary_post:list'%}">Blog</a>
     <a class="navbar-brand "href="{% url 'question'%}">BOT</a>
      <a class="navbar-brand "href="https://github.com/nlpia/nlpia-bot">Github</a>
      <a class="navbar-brand" href="{% url 'team'%}">Team</a>
       <a class="navbar-brand" href="{% url 'nlpia'%}">NLPIA</a>
+
+      {%if user.is_authenticated%}
+      <a class="navbar-brand" href="{% url 'profile'%}">Profile</a>
+      <a class="navbar-brand" href="{% url 'logout'%}">Logout</a>
+      {%else%}
+      <a class="navbar-brand" href="{% url 'login'%}">Login</a>
       <a class="navbar-brand" href="{% url 'register'%}">Register</a>
+      {%endif%}
+      
       <form class="form-inline my-2 my-lg-0 " action="http://www.google.com/search" method="GET">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" >
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </nav>
 </div>
+
+
+
+<!-- ------------------------------------------ -->
+
+
+
 
         {% if messages%}
           {% for message in messages%}
