@@ -34,7 +34,7 @@ class API_objects_details(generics.RetrieveUpdateDestroyAPIView):
 
 def team(request):
 
-    return render(request, "team.html")
+    return render(request, "test.html")
 
 
 def nlpia(request):
@@ -80,9 +80,10 @@ def reply(request):
 
     # chat history
     obj = Chat.objects.all().order_by('-create_date')
+    document_obj = Document.objects.all()
 
-    dict_1 = {'insert': bot_reply, 'Question': my_question,
-              'c': obj}
+    dict_1 = {'insert': bot_reply[0][1], 'Question': my_question,
+              'c': obj, 'document_obj': document_obj}
 
     # Save data in the database
     if my_question and bot_reply:

@@ -34,9 +34,13 @@ urlpatterns = [
     url('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     url('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     url('profile/', user_views.profile, name='profile'),
+    url('basic/<int:pk>/', views.API_objects_details.as_view(), name='basic')
 ]
 
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
+
+
+#
