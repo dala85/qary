@@ -8,7 +8,7 @@ conda-package-handling==1.6.0
 cryptography==2.8
 gunicorn==20.0.4
 idna==2.8
-lxml==4.5.0
+lxml==4.6.5
 ncclient==0.6.7
 paramiko==2.7.1
 pycosat==0.6.3
